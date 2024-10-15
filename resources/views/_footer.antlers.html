@@ -1,0 +1,13 @@
+<footer class="bg-zinc-900 text-green-400 py-4 mt-8 text-sm">
+    <div class="container mx-auto px-4 text-center space-y-2">
+        <p>&copy; {{ now | format="Y" }} {{ site:name }}. All rights reserved.</p>
+        <p>Any resemblance to actual tech news is purely coincidental and honestly quite concerning.</p>
+    </div>
+    <div class="flex items-center justify-center mt-4">
+        {{ settings:social }}
+        <a href="{{ $url }}" class="ml-4" aria-label="{{ $name }}" rel="noopener">
+            {{ svg :src="icon" class="h-6 w-6 hover:text-green-500" }}
+        </a>
+        {{ /settings:social }}
+    </div>
+</footer>
