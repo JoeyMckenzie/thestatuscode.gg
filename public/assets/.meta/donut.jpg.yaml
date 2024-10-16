@@ -1,4 +1,5 @@
-data: {  }
+data:
+  alt: 'Hero image'
 size: 51219
 last_modified: 1729017776
 width: 2048

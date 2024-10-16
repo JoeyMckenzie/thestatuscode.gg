@@ -1,0 +1,13 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: url
+            field:
+              collections:
+                - pages
+              type: link
+              display: URL

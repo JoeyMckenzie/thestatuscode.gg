@@ -1,1 +1,13 @@
-{  }
+tree:
+  -
+    id: 36fa18c0-33e4-47cf-93e8-dfc177157808
+    title: Home
+    url: 'entry::home'
+  -
+    id: 7fb61ef4-b087-47f8-93ef-cf2260367c88
+    title: News
+    url: 'entry::e846f60b-5ba9-4637-8150-6ab97dace712'
+  -
+    id: 27ca22b9-91b5-468a-a89a-5063a52b55cb
+    title: Opinion
+    url: 'entry::334fe3cb-1b19-4d91-b0c0-af1480044b66'

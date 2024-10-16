@@ -1,15 +1,14 @@
 <article class="max-w-6xl mx-auto px-3">
     <header class="mx-auto max-w-xl text-center content">
-        <h1 class="mb-4">Blog</h1>
-        <p>This is description of the type of content you would expect to read here on this blog.</p>
+        <h1 class="mb-4">Latest Stories</h1>
     </header>
-    {{ collection:blog as="posts" paginate="12" sort="date:desc" }}
+    {{ collection:articles as="article" paginate="12" sort="date:desc" }}
         <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-8">
-            {{ posts }}
+            {{ article }}
                 <div class="{{ $first ? 'md:col-span-2' : 'col-span-1' }}">
-                    {{ partial:blog/card :oversized="first" }}
+                    {{ partial:articles/card :oversized="first" }}
                 </div>
-            {{ /posts }}
+            {{ /article }}
         </section>
         {{ paginate }}
             {{ if $prev_page || $next_page }}
@@ -23,5 +22,5 @@
             </section>
             {{ /if }}
         {{ /paginate }}
-    {{ /collection:blog }}
+    {{ /collection:articles }}
 </article>

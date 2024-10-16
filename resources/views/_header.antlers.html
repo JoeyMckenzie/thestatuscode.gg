@@ -1,10 +1,14 @@
 <header class="bg-zinc-900 text-green-400 py-6">
     <div class="container mx-auto px-4">
-        <h1 class="text-4xl font-bold text-center">{{ site:name }}</h1>
-        <p class="text-center mt-2">{{ site:attributes:description }}</p>
+        <div
+            class="flex flex-row items-center justify-center terminal-title text-4xl font-bold text-center font-mono"
+        >
+            <span id="typed-text"></span>
+            <span class="cursor">|</span>
+        </div>
         <nav class="mt-4">
             <ul class="flex justify-center space-x-4">
-                {{ nav:header }}
+                {{ nav:header include_home="true" }}
                     <li>
                         <a href="{{ url }}" class="hover:text-green-200">
                             {{ title }}

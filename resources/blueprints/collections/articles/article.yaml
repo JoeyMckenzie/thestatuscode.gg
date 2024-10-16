@@ -12,22 +12,38 @@ tabs:
               validate:
                 - required
           -
-            handle: preview
+            handle: intro
             field:
               remove_empty_nodes: false
               type: bard
-              display: Preview
+              display: Intro
           -
             handle: hero_image
             field:
               container: assets
               type: assets
               display: 'Hero Image'
+              max_files: 1
           -
-            handle: content
+            handle: main_content
             field:
-              type: markdown
-              localizable: true
+              remove_empty_nodes: false
+              type: bard
+              display: 'Main Content'
+              reading_time: true
+              sets:
+                main:
+                  display: Main
+                  sets:
+                    new_set:
+                      display: 'New Set'
+                      fields:
+                        -
+                          handle: code
+                          field:
+                            mode: clike
+                            type: code
+                            display: Code
   sidebar:
     display: Sidebar
     sections:
@@ -39,4 +55,12 @@ tabs:
               type: slug
               localizable: true
               validate: 'max:200'
+          -
+            handle: date
+            field:
+              type: date
+              required: true
+              default: now
+              validate:
+                - required
 title: Article
